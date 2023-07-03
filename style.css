@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+* {
+    box-sizing: border-box;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+body {
+    font-family: 'Exo', 'sans-serif';
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+    overflow: scroll;
+    margin: 0;
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    max-height: 100vh;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: absolute;
+    opacity: 0;
+}
+
+.container {
+    display: flex; 
+    min-height: 100vh;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    flex-wrap: nowrap;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90vw;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    flex: 0.2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 0;
+
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.panel::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.panel br {
+    position:absolute;
+    opacity: 0;
+    line-height: 0.01px;
+    display: none;
+}
+
+.panel h3 {
+    font-size: 22px;
+    position: absolute;
+    font-weight: 500;
+    left: 0;
+    top: 0px;
+    margin: 20px;
+    padding: auto;
+    opacity: 0;
+    text-align: center;
+    width: 90vw;
+    overflow-x: visible;
+}
+
+.panel h2 {
+    font-size: 30px;
+    position: absolute;
+    font-weight: 600;
+    left: 0;
+    top: 0px;
+    margin: auto;
+    padding: auto;
+    opacity: 0;
+    text-align: center;
+    width: 90vw;
+}
+
+.panel h1 {
+    font-size: 56px;
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+    opacity: 0;
+    text-align: center;
+    width: 90vw;
+}
+
+.panel li {
+    font-size: 22px;
+    position: absolute;
+    font-weight: 500;
+    left: 0;
+    top: 96px;
+    margin: 20px;
+    opacity: 0;
+    text-align: center;
+    width: 90vw;
+}
+
+.panel ul {
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+    cursor: auto;
+    max-height: 78vh;
+}
+
+.panel.active br {
+    opacity: 1;
+    position: relative;
+    line-height: auto;
+    display: block;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    padding: auto;
+    margin: 0;
+    position: relative;
+}
+
+.panel.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    position: relative;
+    margin: 0px;
+    padding: 0px; 
+}
+
+.panel.active h1 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    margin: 0;
+    padding: auto;
+    margin-top: 12px;
+    position: relative;
+}
+
+.panel.active li {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    position: relative;
+}
+
+.panel.active ul {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    position: relative;
+    list-style-type: none;
+}
+
+.panel.active img {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    position: absolute;
+    max-width: 90vw;
+    top: 60px;
+    margin:auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    position: relative;
+    flex: 1;
+    width: 45vw;
+    min-height: 30vh;
+    flex-wrap: wrap;
+
+}
+
+.column h2 {
+    position: relative;
+    top: 76px;
+    width: auto;
+    margin: auto;
+    padding: auto;
+}
+
+.column ul {
+    position: relative;
+    width: auto;
+    min-height: 20vh;
+    margin: auto;
+    padding: 0px;
+    border: 0px;
+    top: 20px;
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+    
+}
+
+.column li {
+    width: auto;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+.dark {
+    color: white;
+}
+
+.dark.active h1 {
+    opacity: 1;
+}
+
+.link {
+    flex: 1 1 15%;
+    width: auto;
+    min-width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom:40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel.active a {
+    position:relative;
+    text-decoration: none;
+    color: black;
+}
+
+.panel.active img {
+    border-radius: 26px;
+}
+
+.link img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.link h3 {
+    font-size: 26px;
+    max-width: 180px;
+    overflow: visible;
+}
+
+.cor {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 50%;
+    position: absolute;
+    width: 90vw;
+    margin: auto;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.panel iframe {
+    position: absolute;
+    visibility: hidden;
+}
+
+.panel.active iframe {
+    position: relative;
+    visibility: visible;
+    margin: 20px;
+    flex: 1 1 45%;
+    min-height: 50vh;
+    border-radius: 26px;
+}
+
+.panel a {
+    pointer-events: none;
+}
+
+.panel.active a {
+    pointer-events: all;
+}
+
+
+@media(max-width: 500px) {
+    .row {
+        display:flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 90vw;
+        top: 60px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .column {
+        position: relative;
+        width: 90vw;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cor {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+        position: absolute;
+        width: 90vw;
+        margin: auto;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
+
+    .panel.active iframe {
+        position: relative;
+        width: 80vw;
+        visibility: visible;
+        margin: 20px;
+        flex: 0 0 100%;
+        min-height: 50vh;
+        border-radius: 26px;
+    }
+
+    .link img {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 10px;
+    }
+
+    .link {
+        flex: 1 1 15%;
+        width: auto;
+        min-width: 200px;
+        height: 100px;
+        padding: 20px;
+        margin: 20px;
+        margin-bottom:0px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
