@@ -29,6 +29,10 @@ img {
     opacity: 0;
 }
 
+.panel img {
+    display: none;
+}
+
 .container {
     display: flex; 
     min-height: 100vh;
@@ -48,7 +52,7 @@ img {
     border-radius: 50px;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    flex: 0.2;
+    flex: 0.15;
     margin-top: 6px;
     margin-bottom: 6px;
     position: relative;
@@ -136,7 +140,7 @@ img {
 .panel.active {
     flex: 5;
     cursor: auto;
-    max-height: 78vh;
+    max-height: 80vh;
 }
 
 .panel.active br {
@@ -188,12 +192,14 @@ img {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
     position: relative;
+
+    border-radius: 26px;
+    display: block;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    flex: 1;
     position: absolute;
     max-width: 90vw;
     top: 60px;
@@ -244,10 +250,6 @@ img {
     color: white;
 }
 
-.dark.active h1 {
-    opacity: 1;
-}
-
 .link {
     flex: 1 1 15%;
     width: auto;
@@ -269,10 +271,6 @@ img {
     color: black;
 }
 
-.panel.active img {
-    border-radius: 26px;
-}
-
 .link img {
     width: 150px;
     height: 150px;
@@ -288,7 +286,6 @@ img {
 .cor {
     display: flex;
     flex-direction: row;
-    flex: 1 1 50%;
     position: absolute;
     width: 90vw;
     margin: auto;
@@ -324,7 +321,6 @@ img {
     .row {
         display:flex;
         flex-direction: column;
-        flex: 0 0 100%;
         flex-wrap: wrap;
         position: absolute;
         width: 90vw;
@@ -344,7 +340,6 @@ img {
     .cor {
         display: flex;
         flex-direction: column;
-        flex: 0 0 100%;
         position: absolute;
         width: 90vw;
         margin: auto;
