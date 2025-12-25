@@ -380,6 +380,10 @@ img {
         align-items: center;
     }
 
+    .secret {
+        display: none;
+    }
+
 }
 
 
